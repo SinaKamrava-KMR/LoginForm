@@ -1,13 +1,135 @@
-body {
+
+*,*::before,*::after{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root{
+  width: 100%;
+  height: 100%;
 }
+
+body{
+  width: 100vw;
+  height: 100vh;
+}
+
+input{
+  outline: 0;
+  border: 0;
+}
+
+svg{
+  fill: gray;
+}
+
+.app{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+  background-size: cover;
+  
+}
+
+
+.form{
+  background-color: rgb(239, 237, 235);
+  width: 50%;
+  max-width: 400px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 6px 8px rgba(107, 107, 107, 0.205);
+}
+
+.form button:last-child{
+  margin-top: 12px;
+}
+
+
+.btn{
+  border: 0;
+  border-radius: 4px;
+  padding-block: 10px;
+  cursor: pointer;
+  transition: all .8 ease-in;
+  outline: 0;
+}
+
+
+
+.active-btn{
+  background-color: rgb(139, 27, 243);
+  color: white;
+}
+.active-btn:hover{
+  background-color: rgb(119, 9, 221);
+}
+.deactive-btn{
+  background-color: rgb(205, 205, 205);
+  color: rgb(139, 27, 243);
+}
+
+.form-input{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+
+  border-radius: 2px;
+}
+
+.form-input svg{
+  position: absolute;
+  left: 10px;
+}
+
+.form-input input {
+ height: 100%;
+ width: 100%;
+ border-radius: 2px;
+ padding: 10px;
+ padding-left: 30px;
+ border: 1px solid rgb(255, 255, 255);
+
+}
+.form-input input:invalid[focused="true"]{
+  border: 1px solid rgb(245, 71, 71);
+}
+.form-input  small {
+  color: rgb(245, 71, 71);
+  position: absolute;
+  bottom: -20px;
+  left: 5px;
+  display: none;
+}
+
+input:invalid[focused="true"] + small  {
+  display: block;
+}
+
+.btns-wrapper{
+  width: 70%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-inline: auto;
+ 
+}
+
+.btns-wrapper .btn{
+    flex: 1;
+    margin: 0 !important;
+
+}
+
