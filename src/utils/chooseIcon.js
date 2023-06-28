@@ -24,10 +24,10 @@ export default function chooseIcon(icon) {
     case "password":
       currentIcon = PASSWORD;
       break;
-    case "confirem":
+    case "confirm":
       currentIcon = CONFIRM;
       break;
-    case 'user':
+    case 'username':
       currentIcon = USER;
     
   }
