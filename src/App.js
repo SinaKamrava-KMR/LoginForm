@@ -1,8 +1,9 @@
+import SignUpForm from "./components/Login/home/SignUpForm";
 
 function App() {
   return (
     <div>
-        init project
+        <SignUpForm/>
     </div>
   );
 }
